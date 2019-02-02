@@ -88,7 +88,7 @@ func dumpMakeVars(ctx Context, config Config, goals, vars []string, write_soong_
 var BannerVars = []string{
 	"PLATFORM_VERSION_CODENAME",
 	"PLATFORM_VERSION",
-	"CERBERUS_VERSION",
+	"cerberus_VERSION",
 	"TARGET_PRODUCT",
 	"TARGET_BUILD_VARIANT",
 	"TARGET_BUILD_TYPE",
@@ -128,10 +128,10 @@ func Banner(make_vars map[string]string) string {
 	fmt.Fprintf(b, "%s=%s\n", "HOST_CROSS_ARCH", make_vars["HOST_CROSS_ARCH"])
 	fmt.Fprintf(b, "%s=%s\n", "HOST_CROSS_2ND_ARCH", make_vars["HOST_CROSS_2ND_ARCH"])
 	fmt.Fprintln(b, "=============================================================")
-	fmt.Fprintf(b, "%s=%s\n", "CERBERUS_VERSION", make_vars["CERBERUS_VERSION"])
+	fmt.Fprintf(b, "%s=%s\n", "cerberus_VERSION", make_vars["cerberus_VERSION"])
 	fmt.Fprintf(b, "%s=%s\n", "BUILD_ID", make_vars["BUILD_ID"])
 	fmt.Fprintf(b, "%s=%s\n", "OUT_DIR", make_vars["OUT_DIR"])
-	fmt.Fprintf(b, "%s=%s\n", "MAINTAINER", make_vars["CERBERUS_MAINTAINER"])
+	fmt.Fprintf(b, "%s=%s\n", "MAINTAINER", make_vars["cerberus_MAINTAINER"])
 	fmt.Fprintln(b, "=============================================================")
 	fmt.Fprintf(b, "%s=%s\n", "PLATFORM_VERSION_CODENAME", make_vars["PLATFORM_VERSION_CODENAME"])
 	fmt.Fprintf(b, "%s=%s\n", "PLATFORM_VERSION", make_vars["PLATFORM_VERSION"])
